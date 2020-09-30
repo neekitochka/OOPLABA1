@@ -4,10 +4,8 @@ public class Palindrome {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++){
             String s = args[i];
-        }
-        String str1 = "nikita";
-        String str2 = reverseString(str1);
-        System.out.print(isPalindrome(str1,str2));
+           System.out.print(s + " " + isPalindrome(s));
+        };
     }
 
     public static String reverseString(String str){
@@ -18,7 +16,8 @@ public class Palindrome {
         return r;
     }
 
-    public static boolean isPalindrome(String s, String str){
-        return s.equals(str);
+    public static boolean isPalindrome(String s){
+        String reversed = reverseString(s);
+        return s.equals(reversed);
     }
 }
